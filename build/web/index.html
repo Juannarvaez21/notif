@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="A Flutter PWA">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Flutter PWA</title>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging.js"></script>
+  <script>
+    // Your Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDlNZ96SZiJrKhwrAYml_0LnsNAGTXCALg",
+      authDomain: "notif-84302.firebaseapp.com",
+      projectId: "notif-84302",
+      storageBucket: "notif-84302.appspot.com",
+      messagingSenderId: "796888873984",
+      appId: "1:796888873984:web:30d3844225cd10194aace5",
+      measurementId: "G-96KMJSMCKD"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const messaging = firebase.messaging();
+    messaging.onMessage((payload) => {
+      console.log('Message received. ', payload);
+      // Customize notification here
+      const notificationTitle = payload.notification.title;
+      const notificationOptions = {
+        body: payload.notification.body,
+        icon: '/firebase-logo.png'
+      };
+
+      self.registration.showNotification(notificationTitle, notificationOptions);
+    });
+  </script>
+</head>
+<body>
+  <script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>
