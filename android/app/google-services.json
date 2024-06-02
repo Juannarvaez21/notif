@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "796888873984",
+    "project_id": "notif-84302",
+    "storage_bucket": "notif-84302.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796888873984:android:2ffd224e79cec2854aace5",
+        "android_client_info": {
+          "package_name": "com.example.notif"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkMjBzmm-xaO0MvwH72DPUest_JGooOwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
